@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080c18">
+<title>Inside a RAG pipeline — animated walkthrough (mobile first)</title>
+<meta name="description" content="A step-by-step animated walkthrough of a retrieval-augmented generation pipeline: corpus, parsing, chunking, embedding, indexes, hybrid retrieval, reranking, cited answers.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#stage-wrap">Skip to the diagram</a>
+
+<header class="top">
+  <p class="kicker">Animated walkthrough</p>
+  <h1>A RAG pipeline, end to end</h1>
+  <p class="lede">Raw documents in, cited answers out. Pick a step, press play, or scrub the timeline.</p>
+</header>
+
+<nav class="chips" aria-label="Pipeline steps">
+  <ol id="chips"></ol>
+</nav>
+
+<main>
+  <section id="stage-wrap" class="card stage" aria-label="Animated diagram">
+    <svg id="stage" role="img" aria-labelledby="stage-title"><title id="stage-title">Pipeline diagram</title></svg>
+  </section>
+
+  <section class="card panel">
+    <h2 id="step-title" class="step-title">Loading…</h2>
+    <p id="step-sum" class="step-sum"></p>
+    <div class="phases" id="phases" aria-label="Phases"></div>
+    <p class="caption" id="caption" aria-live="polite"></p>
+  </section>
+</main>
+
+<footer>
+  <p>Built as a mobile-first demo · 8 steps · deep-link with <code>#s=3</code> · keys <code>←</code> <code>→</code> <code>space</code>.
+  Draws in container pixels, so the type stays legible on a phone.</p>
+</footer>
+
+<div class="dock" id="dock">
+  <div class="dock-in">
+    <input id="scrub" type="range" min="0" max="1000" value="0" step="1" aria-label="Timeline for this step">
+    <div class="btns">
+      <button id="prev" type="button">Prev</button>
+      <button id="play" class="primary" type="button">Play</button>
+      <button id="next" type="button">Next</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
